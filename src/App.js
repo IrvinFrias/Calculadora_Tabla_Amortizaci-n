@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import Nav from "./components/Nav/Nav";
 import './App.css';
+import {useState} from "react";
+import InteresSimple from "./components/InteresSimple/InteresSimple";
+import InteresComplejo from "./components/InteresComplejo/InteresComplejo";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    const [seccion, setSeccion] = useState({
+        interesSimple: true,
+        interesComplejo: false,
+    });
+    const renderSeccion = () => {
+        setSeccion({...seccion, interesSimple: !seccion.interesSimple, interesComplejo: !seccion.interesComplejo })
+    }
+
+  return(
+      <div>
+          <Nav renderSeccion={renderSeccion}/>
+          <main className="container mt-3">
+              {
+                  seccion.interesSimple ? <InteresSimple/> : <InteresComplejo/>
+              }
+
+          </main>
+      </div>
+  )
 }
-
 export default App;

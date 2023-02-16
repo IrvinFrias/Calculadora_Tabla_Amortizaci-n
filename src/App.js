@@ -4,6 +4,8 @@ import {useState} from "react";
 import InteresSimple from "./components/InteresSimple/InteresSimple";
 import InteresComplejo from "./components/InteresComplejo/InteresComplejo";
 
+
+
 const App = () => {
     const [seccion, setSeccion] = useState({
         interesSimple: true,
@@ -15,7 +17,7 @@ const App = () => {
 
   return(
       <div>
-          <Nav renderSeccion={renderSeccion}/>
+          <Nav renderSeccion={renderSeccion} seccion={seccion}/>
           <main className="container mt-3">
               {
                   seccion.interesSimple ? <InteresSimple/> : <InteresComplejo/>

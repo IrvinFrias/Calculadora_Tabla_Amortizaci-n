@@ -4,6 +4,9 @@
 .bg-red{
     background-color: #D81E05;
 }
+.bg-custom{
+    background-color: rgba(216, 30, 5, 0.04);
+}
 
 .nav-list{
     margin: 0;
@@ -11,8 +14,8 @@
 }
 
 .nav-link{
-    margin: 0.5rem 1rem 0.5rem 0;
-    padding: 0 0 0.5rem 0;
+    margin: 0 1rem 0 0;
+    padding: 0.4rem 0 0.4rem!important;
     cursor: pointer;
 }
 .active{

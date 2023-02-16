@@ -3,7 +3,10 @@ import './InteresComplejo.css';
 const InteresComplejo = () => {
     return(
         <div>
-            Inters complejo
+            <h3 className="text-red">Interés Complejo</h3>
+            <div>
+
+            </div>
         </div>
     )
 }
